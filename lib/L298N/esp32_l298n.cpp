@@ -12,8 +12,8 @@ ESP32_L298N::ESP32_L298N(int pin1, int pin2, int ch1, int ch2, bool is_pwm)
   pinMode(pin2_, OUTPUT);
 
   if(is_pwm_){
-    ledcSetup(ch1_, 12800, 8);  // 8bit = 256
-    ledcSetup(ch2_, 12800, 8);
+    ledcSetup(ch1_, 115200, 8);  // 8bit = 256
+    ledcSetup(ch2_, 115200, 8);
     ledcAttachPin(pin1_, ch1_);
     ledcAttachPin(pin2_, ch2_);
   }
